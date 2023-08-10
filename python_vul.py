@@ -77,7 +77,7 @@ def do_chpasswd():
             flash("The password don't comply our complexity requirements")
             return render_template('user.chpasswd.html')
 
-        libuser.password_change(g.session['username'], password) # = libuser.login(username, password)
+        libuser.password_change(g.session['username']) # = libuser.login(username, password)
         flash("Password changed")
 
     return render_template('user.chpasswd.html')
