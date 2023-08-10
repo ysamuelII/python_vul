@@ -43,7 +43,7 @@ def do_create():
     if request.method == 'POST':
 
         username = request.form.get('username')
-        password = request.form.get('password')
+        password = request.form.get('username')
         #email = request.form.get('password')
         if not username or not password:
             flash("Please, complete username and password")
